@@ -1,0 +1,284 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800" MinHeight="500" MinWidth="500" Background="#FF4E4E4C"  >
+    <Grid>
+        <TabControl x:Name="Main_tabcontrol" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" OverridesDefaultStyle="True"  >
+            <TabItem HorizontalAlignment="Center" Width="0" Height="0" Visibility="Hidden">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.2*"/>
+                        <RowDefinition Height="1.3*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*" MinWidth="350"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Welcome to MessApp" Grid.Column="1" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Script MT Bold" FontSize="36"/>
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition MinHeight="35"/>
+                            <RowDefinition MinHeight="35"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Sign in" x:Name="sign_in_btn" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Height="40" Margin="5" Click="sign_in_btn_Click"/>
+                        <Button Content="Sign up" x:Name="sign_up_btn" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Height="40" Margin="5" Click="sign_up_btn_Click"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="" HorizontalAlignment="Center" Width="0" Height="0" Visibility="Hidden">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition MinHeight="70"/>
+                        <RowDefinition Height="2*" MinHeight="200">
+                        </RowDefinition>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition MinWidth="60"/>
+                        <ColumnDefinition Width="2*" MinWidth="350"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Log in to MessApp" Grid.Column="1" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" FontFamily="Script MT Bold" FontSize="36"/>
+                    <Button x:Name="back_btn1" Content="Back" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10" Height="40" Width="40" Click="back_btn1_Click" />
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Login" Grid.Column="0" Grid.Row="0"  VerticalAlignment="Top" FontSize="20"/>
+                        <Label Content="Password" Grid.Column="0" Grid.Row="1"  VerticalAlignment="Top" FontSize="20"/>
+                        <TextBox Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom" Height="35" Margin="0,15,0,0" FontSize="20" />
+                        <PasswordBox Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom" Height="35" Margin="0,15,0,0" FontSize="20" />
+                        <Button x:Name="log_in_btn1" Content="Log in" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Width="100" Click="log_in_btn1_Click"/>
+                    </Grid>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="" HorizontalAlignment="Center" Width="0" Height="0" Visibility="Hidden">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="2*" MinWidth="200"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="2*" MinWidth="225"/>
+                        <ColumnDefinition Width="0.2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition MinHeight="55"/>
+                        <RowDefinition Height="4*" MinHeight="275" />
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Create your personal account" Grid.ColumnSpan="3" Grid.Column="1" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" FontFamily="Script MT Bold" FontSize="36" Margin="0,0,0,5"/>
+                    <Button x:Name="back_btn2" Content="Back" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10" Height="40" Width="40" Click="back_btn2_Click" />
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Image x:Name="user_create_img" Source="prof.jpg" />
+                        <Button x:Name="Upload_btn" Content="Upload a photo" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="30" Width="130" Margin="0,0,10,0" Click="Upload_btn_Click"/>
+                    </Grid>
+                    <Grid Grid.Column="3" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Content="name" HorizontalAlignment="Left" VerticalAlignment="Bottom"   />
+                        <TextBox Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="30" Margin="0,5,0,0" FontSize="20" />
+                        <Label Content="login" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Bottom"  />
+                        <TextBox Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="30" Margin="0,5,0,0" FontSize="20"/>
+                        <Label Content="password" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Bottom"  />
+                        <TextBox Grid.Row="5" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="30" Margin="0,5,0,0" FontSize="20"/>
+                        <Label Content="confirm the password" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                        <TextBox Grid.Row="7" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="30" Margin="0,5,0,0" FontSize="20"/>
+                        <Button x:Name="create_ac_btn" Content="Create an Account" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="25"  Click="create_ac_btn_Click"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Height="0" Width="0" Visibility="Hidden">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="85"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <ListBox x:Name="m_list" SelectionChanged="m_list_SelectionChanged" >
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                        <ListBox.ItemContainerStyle>
+                            <Style>
+                                <Setter Property="ListBoxItem.Margin" Value="0,0,5,0"/>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <Image Source="uprof.jpg" Height="55" Width="55">
+                            <Image.ToolTip>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Your profile"/>
+                                </StackPanel>
+                            </Image.ToolTip>
+                        </Image>
+                        <Image Source="plane.jpg" Height="55" Width="55">
+                            <Image.ToolTip>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Search"/>
+                                </StackPanel>
+                            </Image.ToolTip>
+                        </Image>
+                    </ListBox>
+                    <TabControl x:Name="main_tab" Grid.Row="1" Grid.ColumnSpan="2" Visibility="Visible">
+                        <TabItem Visibility="Hidden"  >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition Width="1.2*" MinWidth="100" MaxWidth="350"/>
+                                    <ColumnDefinition Width="0.4*" MinWidth="100"/>
+                                    <ColumnDefinition Width="2*" MinWidth="110"/>
+                                    <ColumnDefinition Width="0.2*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition />
+                                    <RowDefinition Height="20"/>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="user_img" Source="prof.jpg" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                                <Label x:Name="us_lb" Grid.Column="2" Grid.Row="1" VerticalAlignment="Top" FontFamily="Script MT Bold" FontSize="20" >
+                                    <Label.Content>
+                                        <TextBlock x:Name="us_child_lb" TextWrapping="Wrap">Username</TextBlock>
+                                    </Label.Content>
+                                </Label>
+                                <TextBox x:Name="chng_name_tb" Text="{Binding ElementName=us_child_lb, Path=Text}" Grid.Column="2" Grid.Row="1" VerticalAlignment="Top" FontFamily="Script MT Bold" FontSize="20" Visibility="Hidden" KeyDown="chng_name_tb_KeyDown"/>
+                                <Grid Grid.Column="1" Grid.Row="2" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="chng_photo_btn" Content="Change photo" Grid.Row="0" MinWidth="110"  MaxWidth="190" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" FontSize="16" Margin="0,1,0,1" Click="chng_photo_btn_Click"/>
+                                    <Button x:Name="chng_name_btn" Content="Change name" Grid.Row="1" MinWidth="110" MaxWidth="190" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" FontSize="16" Margin="0,1,0,1" Click="chng_name_btn_Click"/>
+                                    <Button x:Name="log_out_btn" Content="Log out" Grid.Row="2" MinWidth="110" MaxWidth="190" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" FontSize="16" Margin="0,1,0,1" Click="log_out_btn_Click"/>
+                                </Grid>
+                                <Grid x:Name="w" Grid.Column="3" Grid.Row="1" Grid.RowSpan="3" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1.5*"/>
+                                        <RowDefinition MinHeight="50"/>
+                                        <RowDefinition Height="6*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBox Margin="5" VerticalScrollBarVisibility="Hidden" AcceptsReturn="True" TextWrapping="Wrap"  />
+                                    <Button Content="Post" Grid.Row="1" Width="100" HorizontalAlignment="Right" Margin="10"/>
+                                    <TextBox Grid.Row="2" Margin="5" VerticalScrollBarVisibility="Visible" IsEnabled="False"/>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Visibility="Hidden">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="3*"/>
+                                    <RowDefinition Height="1*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Script MT Bold" FontSize="22">
+                                    <Label.Content>
+                                        <TextBlock TextWrapping="Wrap">Enter the name or login  of person to start chatting</TextBlock>
+                                    </Label.Content>
+                                </Label>
+                                <TextBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" />
+                                <ListBox x:Name="Lb" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Top" Margin="0, 30, 0, 0">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Vertical">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition/>
+                                                        <ColumnDefinition/>
+                                                        <ColumnDefinition/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Image Source="{Binding Photo}" Height="50" Width="50"/>
+                                                    <TextBlock Text="{Binding LastName}" Grid.Column="1" Margin="0, 0, 10, 0"/>
+                                                    <TextBlock Text="{Binding FirstName}" Grid.Column="2"/>
+                                                </Grid>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Visibility="Hidden">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition Width="1.2*" MinWidth="100" MaxWidth="350"/>
+                                    <ColumnDefinition Width="0.4*" MinWidth="100"/>
+                                    <ColumnDefinition Width="2*" MinWidth="110"/>
+                                    <ColumnDefinition Width="0.2*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition />
+                                    <RowDefinition Height="20"/>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="friend_img" Grid.Column="1" Grid.Row="1"  Source="prof.jpg" VerticalAlignment="Top" HorizontalAlignment="Center"  />
+                                <Label Grid.Column="2"  Grid.Row="1" VerticalAlignment="Top" FontFamily="Script MT Bold" FontSize="20" >
+                                    <Label.Content>
+                                        <TextBlock x:Name="friend_name_lb" TextWrapping="Wrap">12345689</TextBlock>
+                                    </Label.Content>
+                                </Label>
+                                <Grid Grid.Column="1" Grid.Row="2">
+                                    <Button x:Name="open_dialog_btn" Content="Open chat" MinWidth="110"  MaxWidth="190" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontSize="16" Click="open_dialog_btn_Click"  />
+
+                                </Grid>
+                                <Grid Grid.Column="3" Grid.Row="1" Grid.RowSpan="2">
+                                    <TextBox x:Name="wall_tb" Margin="5" Grid.RowSpan="3" VerticalScrollBarVisibility="Visible" IsEnabled="False" Visibility="Visible"/>
+                                    <Grid x:Name="wall_2_tb" Margin="5" Grid.RowSpan="3"  Visibility="Hidden">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="6*"/>
+                                            <RowDefinition Height="1.5*"/>
+                                            <RowDefinition Height="50"/>
+                                        </Grid.RowDefinitions>
+                                        <TextBox x:Name="read_mes_tb" VerticalScrollBarVisibility="Visible" IsEnabled="False" />
+                                        <TextBox x:Name="write_mes_tb" Grid.Row="1" VerticalScrollBarVisibility="Hidden" AcceptsReturn="True" TextWrapping="Wrap" Margin="0,10,0,0" IsUndoEnabled="False" TextChanged="write_mes_tb_TextChanged"/>
+                                        <Button x:Name="send_btn" Grid.Row="2" Content="Send" Height="30" Width="100" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
